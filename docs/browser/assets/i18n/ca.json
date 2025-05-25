@@ -1,0 +1,224 @@
+{
+  "app": {
+    "global":{
+      "validations":{
+        "min-max-pcpunta": "El valor ha de ser entre {{min}},0 i {{max}},0",
+        "min-max-pcvall": "El valor ha de ser entre {{min}},0 i {{max}},0",
+        "min-salts-icp": "Valor obligatori superior o igual a 0",
+        "extensio-fitxer": "Format de fitxer incompatible",
+        "contingut-fitxer": "El fitxer no compleix amb el volum de dades mínimes requerides",
+        "tamany-fitxer": "La mida del fitxer supera els 2.5MB"
+      },
+      "errors": {
+        "server-error-header": "Error en el procés",
+        "server-error": "Ho sentim, sembla que hi ha hagut un problema. Si us plau, intenta-ho de nou més tard. Si el problema persisteix, no dubtis a posar-te en contacte amb el nostre equip de suport per obtenir ajuda addicional."
+      }
+    },
+    "components": {
+      "home": {
+        "introduction": {
+          "item0": "Aquesta calculadora t'ajudarà a optimitzar la potència elèctrica contractada que tens a casa teva o confirmar que la que tens és la més adient per no pagar de més. A partir de les dades del teu consum i de les característiques del teu habitatge, pots conèixer la potència elèctrica òptima que has de contractar.",
+          "item1": "Per poder-ho fer, caldrà que disposis prèviament d'informació sobre el consum energètic real del darrer any (com a mínim) del teu habitatge. La calculadora et demanarà que adjuntis uns arxius amb aquestes dades, que cal descarregar prèviament del web de Datadis.",
+          "item2": "Per saber com has d'obtenir els arxius de dades de consum elèctric, <a href=\"https://icaen.gencat.cat/ca/energia/usos_energia/llar/contractacio-energetica/optimitzacio-de-la-potencia-contractada/guia-dus-de-la-calculadora-de-potencia/\" target=\"_blank\">pots consultar la informació que trobaràs en aquest espai.</a>"
+        },
+        "links": {
+          "title": "Enllaços d’interès",
+          "item0": "Informació sobre contractació d'energia elèctrica",
+          "item1": "Recomanacions sobre estalvi energètic",
+          "item2": "Rehabilitació energètica d'habitatges"
+        },
+        "buttons": {
+          "init": "Comença"
+        }
+      },
+      "formulari":{
+        "repetir": "Començar de nou",
+        "seguent": "Següent",
+        "calcula": "Calcula",
+        "enrere": "Enrere",
+        "rollover":{
+          "pas1":{
+            "title": "Pas 1",
+            "subtitle": "Potència contractada"
+          },
+          "pas2":{
+            "title": "Pas 2",
+            "subtitle": "Interruptor ICP"
+          },
+          "pas3":{
+            "title": "Pas 3",
+            "subtitle": "Dades de consum i potència"
+          },
+          "pas4":{
+            "title": "Pas 4",
+            "subtitle": "Equipament de l'habitatge"
+          },
+          "pas5":{
+            "title": "Pas 5",
+            "subtitle": "Resultat"
+          }
+        },
+        "pas1":{
+          "introduction": {
+            "title": "Potència contractada",
+            "question1": "Quina és la potència contractada actual?",
+            "tip": "Correspon a la potència màxima que es pot consumir en un determinat moment sense que salti l’interruptor de control de potència (ICP). Aquest concepte està relacionat amb poder connectar i fer servir diferents aparells elèctrics de manera simultània.\n\nEl valor de la potència contractada actual es pot trobar a la factura elèctrica. Podem trobar dos valors de potència contractada (en període punta i en període vall), tot i que habitualment aquests dos valors seran idèntics."
+          },
+          "question": {
+            "potenciaContractadaPeriodePunta": "Potència del <b>període punta</b> (kW)",
+            "potenciaContractadaPeriodePuntaTip": "El període punta es de dilluns a divendres, entre les 08:00 i 00:00 hores.",
+            "potenciaContractadaPeriodeVall": "Potència del <b>període vall</b> (kW)",
+            "potenciaContractadaPeriodeVallTip": "El període vall és de dilluns a divendres, entre les 00:00 i les 08:00 hores. També inclou totes les hores dels caps de setmana i festius."
+          }
+        },
+        "pas2": {
+          "introduction": {
+            "title": "Interruptor de Control de Potència (ICP)",
+            "tip": "L'ICP és l'element de control de la instal·lació elèctrica que limita la potència que es pot consumir. Si els aparells que es connecten de manera simultània superen la potència contractada, l'ICP salta i desconnecta la instal·lació."
+          },
+          "salts-icp-anuals": "Aproximadament, <span class=\"FW_forms_label\">quantes vegades salta l’ICP</span> a l’any? <span class=\"red\">*</span>",
+          "salts-icp-mes-del-desitjat": "<span class=\"FW_forms_label\">L’ICP salta més vegades</span> del que desitges?",
+          "permet-salts-icp-minims": "Et molestaria que <span class=\"FW_forms_label\">l’ICP saltés entre {{min}} i {{max}} vegades</span> l’any?"
+        },
+        "pas3":{
+          "introduction": {
+            "title": "Dades de consum i potències màximes",
+            "subtitle": "Puja l’arxiu de les teves dades de consum i de potències màximes en format CSV",
+            "body":{
+              "p1": "Per tal de garantir un resultat fiable, les dades de consum horari i potències màximes mesurades han de correspondre, com a mínim, a un període temporal d’un any, tot i que es recomana que sigui de dos anys.",
+              "p2": "Per saber com has d'obtenir els arxius de dades de consum elèctric, <a href=\"https://icaen.gencat.cat/ca/inici/\" target=\"_blank\">pots consultar la informació que trobaràs en aquest espai.</a>"
+            }
+          },
+          "consums-horaris": "Fitxer de consum horari",
+          "consums-horaris-tip": "Correspon al fitxer que conté les mesures de consum elèctric del teu habitatge per a cada hora de cada dia.",
+          "potencies-1qh": "Fitxer de potències",
+          "potencies-1qh-tip": "Correspon al fitxer que conté les mesures de potència màxima demandada en cada mes i cada període.",
+          "pujar-fitxer": "Fes click o arrossega aquí el fitxer per carregar-lo",
+          "fitxer-csv": "Fitxer .csv"
+        },
+        "pas4": {
+          "introduction": {
+            "title": "Equipament de l’habitatge",
+            "tip": "Fa referència als equips i electrodomèstics presents en l’habitatge que, per les seves característiques i el seu ús, influeixen en la determinació de la potència contractada òptima."
+          },
+          "calefaccio-electrica": "Hi ha <span class=\"FW_forms_label\">calefacció elèctrica</span> (bomba de calor, radiadors elèctrics, etc.)? <span class=\"red\">*</span>",
+          "aire-acondicionat": "Hi ha <span class=\"FW_forms_label\">aire condicionat</span> en l’habitatge? <span class=\"red\">*</span>",
+          "calefaccio-aerotermia": "Hi ha un <span class=\"FW_forms_label\">equip d’aerotèrmia</span> per a calefacció, refrigeració i aigua calenta? (un únic equip) <span class=\"red\"> *</span>",
+          "calefaccio-aerotermia-tip": "Un equip d'aerotèrmia és un únic equip que aporta refrigeració a l'estiu, calefacció a l'hivern i també produeix l'aigua calenta.",
+          "aigua-calenta-per-electricitat": "Hi ha <span class=\"FW_forms_label\">sistemes de generació d’aigua calenta sanitària</span> a partir d’electricitat (escalfador elèctric, bomba de calor, etc.)? <span class=\"red\"> *</span>",
+          "cuina-electrica": "Hi ha <span class=\"FW_forms_label\">cuina elèctrica</span> (vitroceràmica o inducció)?<span class=\"red\"> *</span>",
+          "forn-electric": "Hi ha <span class=\"FW_forms_label\">forn elèctric</span>?<span class=\"red\"> *</span>",
+          "assecadora": "Hi ha <span class=\"FW_forms_label\">assecadora</span>?<span class=\"red\"> *</span>",
+          "vehicle-electric": "Hi ha <span class=\"FW_forms_label\">vehicle elèctric</span>?<span class=\"red\"> *</span>",
+          "vehicle-electric-tip": "Marcar \"Sí\" quan hi ha recàrrega de vehicle elèctric en el mateix subministrament de l'habitatge",
+          "us-regular-tip": "Marca \"Sí\" quan fas servir aquest equip regularment (una vegada a la setmana o més)."
+        },
+        "pas5": {
+          "introduction": {
+            "title": "Resultat",
+            "subtitle": "Aquest és el resultat obtingut a partir de les dades facilitades."
+          },
+          "resultats":{
+            "pa": "Potència actual",
+            "pcaj": "Potència òptima ajustada",
+            "pcaj-tip": "Correspon a la potència contractada que aconsegueix un major estalvi econòmic.",
+            "pcse": "Potència òptima segura",
+            "pcse-tip": "Correspon a la potència contractada que, amb major seguretat, no serà sobrepassada."
+          },
+          "recomanacions":{
+            "title": "Recomanacions",
+            "p1": "Els valors de les potències recomanades són aplicables als dos períodes, és a dir, que tant la potència contractada en el període punta com la potència contractada en el període vall hauran de prendre el mateix valor.",
+            "p2": "Aquestes recomanacions tenen valor i són fiables si els hàbits de consum energètic futurs es mantindran com fins ara. Si en el passat les pautes de consum energètic han estat diferents a l’actual (per exemple, fa 6 mesos que es va instal·lar aire condicionat), o bé en el futur es preveu algun canvi important, aquestes recomanacions no tindran valor i no seran fiables."
+          },
+          "estalvi":{
+            "title": "Calcula l'estalvi econòmic que obtindràs si optimitzes la potència contractada",
+            "potencia-periode-punta": "Escriu la potència contractada desitjada",
+            "calcular": "Calcula",
+            "resultat": "Resultat",
+            "resultat-estalvi": "La potència contractada desitjada de {{potencia}} kW suposarà un estalvi de {{ resultat }} € cada any.",
+            "resultat-despesa": "La potència contractada desitjada de {{potencia}} kW suposarà una despesa de {{ resultat }} € cada any."
+          },
+          "consum":{
+            "title": "Consum energètic",
+            "mig-horari": "Consum horari mig",
+            "mig-diari": "Consum mig diari",
+            "mig-periode": "Consum per períodes"
+          },
+          "altres":{
+            "title": "Més informació d’interès",
+            "item0": "Cost del canvi de potència contractada",
+            "item0-text0": "Per canviar la potència contractada cal contactar amb la vostra empresa comercialitzadora i sol·licitar el canvi de potència, indicant la nova potència contractada desitjada. Si voleu canviar la potència contractada també podeu consultar a un instal·lador oficial. A més, heu de tenir en compte que:",
+            "item0-text1": "<ul><li>Només es permet un canvi de potència a l’any</li><li>Qualsevol canvi de potència té costos associats.<ul><li>Reduir la potència comporta despeses per part de la companyia elèctrica (10,94 €). Aquest pagament és únic, és a dir, només es realitza una vegada.</li><li>Augmentar la potència, que vol dir tenir la possibilitat de connectar més aparells simultàniament, suposa pagar els 10,94 € anteriorment indicats, més 44,86 € per cada kW d’augment en concepte de drets d’extensió i drets d’accés.</li></ul></li></ul>",
+            "item0-text2": "La companyia elèctrica inclourà tots aquests imports en la primera factura elèctrica després d'haver efectuat el canvi.",
+            "item0-text3": "També cal tenir present que en el moment de contractar la potència actualment es pot ajustar en intervals de 0,1 kW.",
+            "item1": "Estalvi econòmic en la reducció de la potència contractada",
+            "item1-text0": "D’acord amb el costos regulats aprovats, per cada kW reduït de potència l’estalvi econòmic és de 45 € anuals.",
+            "item1-text1": "Per exemple, passar de 9,2 kW a 4,6 kW representa un estalvi econòmic de 207 € anuals.",
+            "item2": "Consells per poder evitar els pics de consum en el dia a dia i poder reduir la potència",
+            "item2-text0": "La potència contractada ve determinada pels pics de demanda elèctrica que tenim com a conseqüència de fer ús dels equips i electrodomèstics que tenim a casa. Per tal de reduir la potència d’aquests pics de consum caldrà evitar la simultaneïtat que es produeix quan engeguem diferents aparells elèctrics a la vegada, especialment aquells equips de major potència i que estiguin en funcionament durant un període de temps llarg.",
+            "item2-text1": "Per exemple, si evitem posar en funcionament a la vegada la vitroceràmica i el forn, o un radiador elèctric i la planxa, aconseguirem que els pics de demanda elèctrica no siguin excessivament elevats. El seguiment d’aquestes pautes crea la possibilitat de reduir encara més la potència contractada que necessitem i, per tant, suposaria un estalvi econòmic en les factures."
+          },
+          "links":{
+            "title": "Enllaços d’interès"
+          },
+          "error":{
+            "calcul-no-completat": "No es pot calcular la potència contractada òptima",
+            "vehicle-electric": "La recàrrega de vehicle elèctric en aquest subministrament fa que no sigui possible calcular la potència contractada òptima. En aquest cas, l'optimització de la potència contractada requereix una anàlisi més específica i detallada.",
+            "dades-insuficients": "Amb les dades proporcionades no és possible establir una recomanació fiable de la potència contractada òptima. El període mínim de dades de consum horari i de potència màxima quarthorària necessaris per a dur a terme el càlcul de manera fiable és d'un any."
+          }
+        },
+        "si": "Sí",
+        "no": "No",
+        "tots": "Tots"
+      },
+      "agrupacio-temporals":{
+        "dia-setmana": "Dia de la setmana",
+        "mes": "Mes",
+        "setmana": "Setmana",
+        "lab-cap": "Tipus de dia",
+        "agrupacions":{
+          "dies-setmana":{
+            "dl": "Dilluns",
+            "dt": "Dimarts",
+            "dc": "Dimecres",
+            "dj": "Dijous",
+            "dv": "Divendres",
+            "ds": "Dissabte",
+            "dg": "Diumenge"
+          },
+          "mesos":{
+            "gen": "Gener",
+            "feb": "Febrer",
+            "març": "Març",
+            "abr": "Abril",
+            "maig": "Maig",
+            "juny": "Juny",
+            "jul": "Juliol",
+            "ag": "Agost",
+            "set": "Setembre",
+            "oct": "Octubre",
+            "nov": "Novembre",
+            "des": "Desembre"
+          },
+          "cap-lab":{
+            "cap": "Cap de setmana",
+            "lab": "Laborable"
+          }
+        }
+      },
+      "grafiques":{
+        "nacional": "Mitjana dels consumidors",
+        "usuari": "Usuari",
+        "teu-consum": "El teu consum",
+        "perfil-horari": "El teu perfil horari",
+        "mitjana-diaria": "Mitjana diària",
+        "periodes":{
+          "p1": "Punta",
+          "p2": "Pla",
+          "p3": "Vall"
+        }
+      }
+
+    }
+  }
+}

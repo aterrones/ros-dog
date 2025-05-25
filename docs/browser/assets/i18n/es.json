@@ -1,0 +1,224 @@
+{
+  "app": {
+    "global":{
+      "validations":{
+        "min-max-pcpunta": "El valor ha de estar entre {{min}},0 y {{max}},0",
+        "min-max-pcvall": "El valor ha de estar entre {{min}},0 y {{max}},0",
+        "min-salts-icp": "Valor obligatorio superior o igual a 0",
+        "extensio-fitxer": "Formato de archivo incompatible",
+        "contingut-fitxer": "El archivo no cumple con el volumen de datos mínimos requeridos",
+        "tamany-fitxer": "El tamaño del archivo supera los 2.5MB"
+      },
+      "errors": {
+        "server-error-header": "Error en el proceso",
+        "server-error": "Lo sentimos, parece que ha habido un problema. Por favor, inténtalo de nuevo más tarde. Si el problema persiste, no dudes en ponerte en contacto con nuestro equipo de soporte para obtener ayuda adicional."
+      }
+    },
+    "components": {
+      "home": {
+        "introduction": {
+          "item0": "Esta calculadora te ayudará a optimizar la potencia eléctrica contratada que tienes en tu casa o confirmar que la que tienes es la más adecuada para no pagar de más. A partir de los datos de tu consumo y de las características de tu vivienda, podrás conocer la potencia eléctrica óptima que debes contratar.",
+          "item1": "Para poder hacerlo, tendrá que disponer previamente de información sobre el consumo energético real del último año (como mínimo) de su vivienda. La calculadora le pedirá que adjunte unos archivos con estos datos, que es necesario descargar previamente de la web de Datadis.",
+          "item2": "Para saber cómo obtener los archivos de datos de consumo eléctrico, <a href=\"https://icaen.gencat.cat/ca/energia/usos_energia/llar/contractacio-energetica/optimitzacio-de-la-potencia-contractada/guia-dus-de-la-calculadora-de-potencia/\" target=\"_blank\">puedes consultar la información que encontrarás en este espacio.</a>"
+        },
+        "links": {
+          "title": "Enlaces de interés",
+          "item0": "Información sobre contratación de energía eléctrica",
+          "item1": "Recomendaciones sobre ahorro energético",
+          "item2": "Rehabilitación energética de viviendas"
+        },
+        "buttons": {
+          "init": "Empieza"
+        }
+      },
+      "formulari":{
+        "repetir": "Empieza de nuevo",
+        "seguent": "Siguiente",
+        "calcula": "Calcula",
+        "enrere": "Atrás",
+        "rollover":{
+          "pas1":{
+            "title": "Paso 1",
+            "subtitle": "Potencia contratada"
+          },
+          "pas2":{
+            "title": "Paso 2",
+            "subtitle": "Interruptor ICP"
+          },
+          "pas3":{
+            "title": "Paso 3",
+            "subtitle": "Datos de consumo y potencia"
+          },
+          "pas4":{
+            "title": "Paso 4",
+            "subtitle": "Equipamiento de la vivienda"
+          },
+          "pas5":{
+            "title": "Paso 5",
+            "subtitle": "Resultado"
+          }
+        },
+        "pas1":{
+          "introduction": {
+            "title": "Potencia contratada",
+            "question1": "¿Cuál es la potencia contratada actual?",
+            "tip": "Corresponde a la potencia máxima que puede consumirse en un determinado momento sin que salte el interruptor de control de potencia (ICP). Este concepto está relacionado con poder conectar y utilizar diferentes aparatos eléctricos de forma simultánea.\n\nEl valor de la potencia contratada actual está indicado en la factura eléctrica. Podemos encontrar dos valores de potencia contratada (en período punta y en período valle), aunque habitualmente estos dos valores serán idénticos."
+          },
+          "question": {
+            "potenciaContractadaPeriodePunta": "Potencia del <b>período punta</b> (kW)",
+            "potenciaContractadaPeriodePuntaTip": "El período punta es de lunes a viernes, entre las 08:00 y 00:00 horas.",
+            "potenciaContractadaPeriodeVall": "Potencia del <b>período valle</b> (kW)",
+            "potenciaContractadaPeriodeVallTip": "El período valle es de lunes a viernes, entre las 00:00 y las 08:00 horas. También incluye todas las horas de los fines de semana y festivos."
+          }
+        },
+        "pas2": {
+          "introduction": {
+            "title": "Interruptor de Control de Potencia (ICP)",
+            "tip": "El ICP es el elemento de control de la instalación eléctrica que limita la potencia que puede consumirse. Si los aparatos que se conectan de forma simultánea superan la potencia contratada, el ICP salta y desconecta la instalación."
+          },
+          "salts-icp-anuals": "¿Aproximadamente, <span class=\"FW_forms_label\">cuántas veces salta el ICP</span> al año? <span class=\"red\">*</span>",
+          "salts-icp-mes-del-desitjat": "<span class=\"FW_forms_label\">¿El ICP salta más veces</span> de lo que deseas?",
+          "permet-salts-icp-minims": "¿Te molestaría que <span class=\"FW_forms_label\">el ICP saltara entre {{min}} y {{max}} veces</span> al año?"
+        },
+        "pas3":{
+          "introduction": {
+            "title": "Datos de consumo y potencias máximas",
+            "subtitle": "Sube el archivo de tus datos de consumo y potencias máximas en formato CSV",
+            "body":{
+              "p1": "Para garantizar un resultado fiable, los datos de consumo horario y potencias máximas medidas deben corresponder, como mínimo, a un período temporal de un año, aunque se recomienda que sea de dos años.",
+              "p2": "Para saber cómo puede obtener los archivos de datos de consumo eléctrico, <a href=\"\" target=\"_blank\">podéis consultar la información que encontraréis en este espacio.</a>"
+            }
+          },
+          "consums-horaris": "Archivo de consumo horario",
+          "consums-horaris-tip": "Corresponde al archivo que contiene las medidas de consumo eléctrico de tu vivienda para cada hora de cada día.",
+          "potencies-1qh": "Archivo de potencias",
+          "potencies-1qh-tip": "Corresponde al archivo que contiene las medidas de potencia máxima demandada en cada mes y cada período.",
+          "pujar-fitxer": "Haz click o arrastra aquí el archivo para cargarlo",
+          "fitxer-csv": "Archivo .csv"
+        },
+        "pas4": {
+          "introduction": {
+            "title": "Equipamiento de la vivienda",
+            "tip": "Hace referencia a los equipos y electrodomésticos presentes en la vivienda que, por sus características y uso, influyen en la determinación de la potencia contratada óptima."
+          },
+          "calefaccio-electrica": "¿Hay <span class=\"FW_forms_label\">calefacción eléctrica</span> (bomba de calor, radiadores eléctricos, etc.)? <span class=\"red\">*</span>",
+          "aire-acondicionat": "¿Hay <span class=\"FW_forms_label\">aire acondicionado</span> en la vivienda? <span class=\"red\">*</span>",
+          "calefaccio-aerotermia": "¿Hay un <span class=\"FW_forms_label\">equipo de aerotermia</span> para calefacción, refrigeración y agua caliente? (un único equipo) <span class=\"red\"> *</span>",
+          "calefaccio-aerotermia-tip": "Un equipo de aerotermia es un único equipo que aporta refrigeración en verano, calefacción en invierno y también produce agua caliente.",
+          "aigua-calenta-per-electricitat": "¿Hay <span class=\"FW_forms_label\">sistemas de generación de agua caliente sanitaria</span> a partir de electricidad (calentador eléctrico, bomba de calor, etc.)? <span class=\"red\"> *</span>",
+          "cuina-electrica": "¿Hay <span class=\"FW_forms_label\">cocina eléctrica</span> (vitrocerámica o inducción)?<span class=\"red\"> *</span>",
+          "forn-electric": "¿Hay <span class=\"FW_forms_label\">horno eléctrico</span>?<span class=\"red\"> *</span>",
+          "assecadora": "¿Hay <span class=\"FW_forms_label\">secadora</span>?<span class=\"red\"> *</span>",
+          "vehicle-electric": "¿Hay <span class=\"FW_forms_label\">vehiculo eléctrico</span>?<span class=\"red\"> *</span>",
+          "vehicle-electric-tip": "Marcar \"Sí\" cuando existe recarga de vehículo eléctrico en el mismo suministro de la vivienda.",
+          "us-regular-tip": "Marca \"Sí\" cuando utilizas este equipo regularmente (una vez a la semana o más)."
+        },
+        "pas5": {
+          "introduction": {
+            "title": "Resultado",
+            "subtitle": "Éste es el resultado obtenido a partir de los datos facilitados."
+          },
+          "resultats":{
+            "pa": "Potencia actual",
+            "pcaj": "Potencia óptima ajustada",
+            "pcaj-tip": "Corresponde a la potencia contratada que logra un mayor ahorro económico.",
+            "pcse": "Potencia óptima segura",
+            "pcse-tip": "Corresponde a la potencia contratada que, con mayor seguridad, no será rebasada."
+          },
+          "recomanacions":{
+            "title": "Recomendaciones",
+            "p1": "Los valores de las potencias recomendadas son aplicables a los dos períodos, es decir, que tanto la potencia contratada en el período punta como la potencia contratada en el período valle deberán tomar el mismo valor.",
+            "p2": "Estas recomendaciones tienen valor y son fiables si los futuros hábitos de consumo energético se mantendrán como hasta ahora. Si en el pasado las pautas de consumo energético han sido distintas a las actuales (por ejemplo, hace 6 meses que se instaló aire acondicionado), o bien en el futuro se prevé algún cambio importante, estas recomendaciones no tendrán valor y no serán fiables."
+          },
+          "estalvi":{
+            "title": "Calcula el ahorro económico que obtendrás si optimizas la potencia contratada",
+            "potencia-periode-punta": "Escribe la potencia contratada deseada",
+            "calcular": "Calcula",
+            "resultat": "Resultado",
+            "resultat-estalvi": "La potencia contratada deseada de {{potencia}} kW supondrá un ahorro de {{resultat}}€ cada año.",
+            "resultat-despesa": "La potencia contratada deseada de {{potencia}} kW supondrá un gasto de {{resultat}}€ cada año."
+          },
+          "consum":{
+            "title": "Consumo energético",
+            "mig-horari": "Consumo horario medio",
+            "mig-diari": "Consumo medio diario",
+            "mig-periode": "Consumo por períodos"
+          },
+          "altres":{
+            "title": "Más información de interés",
+            "item0": "Coste del cambio de potencia contratada",
+            "item0-text0": "Para cambiar la potencia contratada es necesario contactar con tu empresa comercializadora y solicitar el cambio de potencia, indicando la nueva potencia contratada deseada. Si deseas cambiar la potencia contratada también puedes consultar a un instalador oficial. Además, debes tener en cuenta que:",
+            "item0-text1": "<ul><li>Sólo se permite un cambio de potencia al año.</li><li>Cualquier cambio de potencia tiene costes asociados.<ul><li>Reducir la potencia comporta gastos por parte de la compañía eléctrica (10,94 €). Este pago es único, esto es, sólo se realiza una vez.</li><li>Aumentar la potencia, que significa tener la posibilidad de conectar más aparatos simultáneamente, supone pagar los 10,94 € anteriormente indicados, más 44,86 € por cada kW de aumento en concepto de derechos de extensión y derechos de acceso.</li></ul></li></ul>",
+            "item0-text2": "La compañía eléctrica incluirá todos estos importes en la primera factura eléctrica después de haber efectuado el cambio.",
+            "item0-text3": "También debe tenerse presente que en el momento de contratar la potencia actualmente se puede ajustar en intervalos de 0,1 kW.",
+            "item1": "Ahorro económico en la reducción de la potencia contratada",
+            "item1-text0": "De acuerdo con los costes regulados aprobados, por cada kW reducido de potencia el ahorro económico es de 45 € anuales.",
+            "item1-text1": "Por ejemplo, pasar de 9,2 kW a 4,6 kW representa un ahorro económico de 207 € anuales.",
+            "item2": "Consejos para evitar los picos de consumo en el día a día y poder reducir la potencia",
+            "item2-text0": "La potencia contratada viene determinada por los picos de demanda eléctrica que tenemos como consecuencia de utilizar los equipos y electrodomésticos que tenemos en casa. Para reducir la potencia de estos picos de consumo, habrá que evitar la simultaneidad que se produce cuando encendemos diferentes aparatos eléctricos a la vez, especialmente aquellos equipos de mayor potencia y que estén en funcionamiento durante un período de tiempo largo.",
+            "item2-text1": "Por ejemplo, si evitamos poner en funcionamiento a la vez la vitrocerámica y el horno, o un radiador eléctrico y la plancha, conseguiremos que los picos de demanda eléctrica no sean excesivamente elevados. El seguimiento de estas pautas crea la posibilidad de reducir aún más la potencia contratada que necesitamos y, por tanto, supondría un ahorro económico en las facturas."
+          },
+          "links":{
+            "title": "Enlaces de interés"
+          },
+          "error":{
+            "calcul-no-completat": "No se puede calcular la potencia contratada óptima.",
+            "vehicle-electric": "La recarga de vehículo eléctrico en este suministro hace que no sea posible calcular la potencia contratada óptima. En este caso, la optimización de la potencia contratada requiere un análisis más específico y detallado.",
+            "dades-insuficients": "Con los datos proporcionados no es posible establecer una recomendación fiable de la óptima potencia contratada. El período mínimo de datos de consumo horario y de potencia máxima 1/4 horaria necesarios para llevar a cabo del cálculo de forma fiable es de un año."
+          }
+        },
+        "si": "Sí",
+        "no": "No",
+        "tots": "Todos"
+      },
+      "agrupacio-temporals":{
+        "dia-setmana": "Día de la semana",
+        "mes": "Mes",
+        "setmana": "Semana",
+        "lab-cap": "Tipo de día",
+        "agrupacions":{
+          "dies-setmana":{
+            "dl": "Lunes",
+            "dt": "Martes",
+            "dc": "Miércoles",
+            "dj": "Jueves",
+            "dv": "Viernes",
+            "ds": "Sábado",
+            "dg": "Domingo"
+          },
+          "mesos":{
+            "gen": "Enero",
+            "feb": "Febrero",
+            "març": "Marzo",
+            "abr": "Abril",
+            "maig": "Mayo",
+            "juny": "Junio",
+            "jul": "Julio",
+            "ag": "Agosto",
+            "set": "Septiembre",
+            "oct": "Octubre",
+            "nov": "Noviembre",
+            "des": "Diciembre"
+          },
+          "cap-lab":{
+            "cap": "Fin de semana",
+            "lab": "Laborable"
+          }
+        }
+      },
+      "grafiques":{
+        "nacional": "Media de los consumidores",
+        "usuari": "Usuario",
+        "teu-consum": "Tu consumo",
+        "perfil-horari": "Tu perfil horario",
+        "mitjana-diaria": "Media diaria",
+        "periodes":{
+          "p1": "Punta",
+          "p2": "Llano",
+          "p3": "Valle"
+        }
+      }
+
+    }
+  }
+}
